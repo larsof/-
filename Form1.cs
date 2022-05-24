@@ -20,7 +20,7 @@ namespace WindowsForms_minimax
         public Form1()
         {
             InitializeComponent();
-            //MessageBox.Show("Добро пожаловать.\nДанная программа является решением минимаксной задачи.\nПодробное описанием в Справке ");
+            MessageBox.Show("Добро пожаловать.\nДанная программа является решением минимаксной задачи.\nПодробное описанием в Справке ");
             
         }
 
@@ -175,7 +175,6 @@ namespace WindowsForms_minimax
         void hand_more10()
         {
             //если вручную и N>10,то выходит сообщение, возвращаем на исходную форму
-            //!!!!!!Доделать, чтобы возвращало на исхлдную форму!!!!!!!!!!!!!!!!
 
             MessageBox.Show("Создайте файл и заполните его вручную");
         }
@@ -221,8 +220,6 @@ namespace WindowsForms_minimax
             {
                 num += max_array[d] * max_array[k - 1];
             }
-            //time();
-            //MessageBox.Show("Сумма произведений равна " + num.ToString() + "\n" + "Время работы программы=" + res);
             MessageBox.Show("Сумма произведений равна "+num.ToString());
         }
 
@@ -247,8 +244,6 @@ namespace WindowsForms_minimax
 
                     totalRows=3;
                     totalColumns = 3;
-                    //totalRows = worksheet.Dimension.End.Row;
-                    //totalColumns = worksheet.Dimension.End.Column;
 
                     if (totalColumns != totalRows)
                     {
@@ -286,9 +281,7 @@ namespace WindowsForms_minimax
             {
                 num += max_array[d] * max_array[k - 1];
             }
-            //time();
             MessageBox.Show("Сумма произведений равна " + num.ToString());
-            //MessageBox.Show("Сумма произведений равна " + num.ToString() + "\n" + "Время работы программы=" + res);
         }
 
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -296,32 +289,6 @@ namespace WindowsForms_minimax
             Form2 newForm = new Form2(this);
             newForm.Show();
         }
-
-        //измеряем время работы программы
-        public string StartTime;
-        public string EndTime;
-        public int res;
-        public void time()
-        {
-            DateTime StartTime = DateTime.Now;
-            Thread.Sleep(10000);
-            DateTime EndTime = DateTime.Now;
-
-            int start_time=Convert.ToInt32(StartTime);
-            int end_time=Convert.ToInt32(EndTime);
-            res = end_time - start_time;
-            /*
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            Thread.Sleep(10000);
-            stopWatch.Stop();
-
-            TimeSpan ts = stopWatch.Elapsed;
-            elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-            ts.Hours, ts.Minutes, ts.Seconds,
-            ts.Milliseconds / 10);*/
-        }
-
         private void времяРаботыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 newForm = new Form3(this);
