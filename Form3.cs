@@ -24,8 +24,6 @@ namespace WindowsForms_minimax
         public string[] time=new string[8];
         private void Form3_Load(object sender, EventArgs e)
         {
-            //Form1 main = this.Owner as Form1;
-
             n_array = new int[] { 10, 100, 500, 1000, 3000, 5000, 8000, 10000 };
 
             dataGridView1.AllowUserToAddRows = false;
@@ -35,9 +33,6 @@ namespace WindowsForms_minimax
             dataGridView1.RowHeadersWidth = 90;
             dataGridView1.Columns[0].HeaderText = "Размерность";
             dataGridView1.Columns[1].HeaderText = "Время работы";
-
-            //n_array = new int[] { 10, 100, 500, 1000, 3000, 5000, 8000, 10000, 15000, 16000, 16315 };
-            
 
             int k = 0;
             for (int i = 0; i < n_array.Length; i++)
